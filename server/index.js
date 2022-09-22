@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
-import { PORT } from "./config.js";
+// import { PORT } from "./config.js";
+
+const port = process.env.PORT || 3000;
 
 // import { dirname, join } from "path";
 // import { fileURLToPath } from "url";
@@ -20,5 +22,5 @@ app.use(taskRoutes);
 
 // app.use(express.static(join(__dirname, "../client/dist")));
 
-app.listen(PORT);
-console.log(`Server is listening on port ${PORT}`);
+app.listen(port);
+console.log(`Server is listening on port ${port}`);
